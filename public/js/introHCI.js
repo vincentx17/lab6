@@ -12,6 +12,11 @@ function initializePage() {
 	$('.project a').click(addProjectDetails);
 
 	$('#colorBtn').click(randomizeColors);
+
+	$("#t").click(function(e) {
+		console.log($.get("/project/random", addProject));
+	})
+
 }
 
 /*
@@ -36,3 +41,5 @@ function addProjectDetails(e) {
 function randomizeColors(e) {
 	console.log("User clicked on color button");
 }
+
+function addProject(result) {
